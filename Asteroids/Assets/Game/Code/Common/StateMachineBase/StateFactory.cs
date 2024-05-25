@@ -1,4 +1,5 @@
-﻿using VContainer;
+﻿﻿using Game.Code.Common.StateMachineBase.Interfaces;
+using VContainer;
 
 namespace Code.Infrastructure.StateMachineBase
 {
