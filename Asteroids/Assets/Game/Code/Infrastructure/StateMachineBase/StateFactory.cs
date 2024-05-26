@@ -1,7 +1,7 @@
-﻿﻿using Game.Code.Common.StateMachineBase.Interfaces;
+﻿using Game.Code.Common.StateMachineBase.Interfaces;
 using VContainer;
 
-namespace Code.Infrastructure.StateMachineBase
+namespace Game.Code.Common.StateMachineBase
 {
     public class StateFactory
     {
