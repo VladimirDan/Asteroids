@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7296820144593184568}
   - component: {fileID: 7619694761055956475}
+  - component: {fileID: -2616519775931026878}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -49,7 +50,20 @@ MonoBehaviour:
   ObjectInterest: 1
   Flags: 262145
   NestedObjects: []
-  NetworkedBehaviours: []
+  NetworkedBehaviours:
+  - {fileID: -2616519775931026878}
+--- !u!114 &-2616519775931026878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3622630250047854823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d615a31558f16604eb530b14bf2074b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7492070839277955651
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,14 +137,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 26ec45af059d6cd4e99cc868dff296a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9c5871cc562b7f4380b6657b79658e0, type: 3}
   m_Color: {r: 1, g: 0.5424528, b: 0.6577854, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.8374193, y: 1.7799999}
+  m_Size: {x: 1.81, y: 1.78}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
