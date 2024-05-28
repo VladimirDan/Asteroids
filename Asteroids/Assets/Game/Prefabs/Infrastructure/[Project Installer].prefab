@@ -50,4 +50,4 @@ MonoBehaviour:
   autoInjectGameObjects: []
   _transitionHandler: {fileID: 3566568485150434590, guid: 3b189c03b8f95f148ba706c969affc87, type: 3}
   _coroutineRunner: {fileID: 1587713050176244343, guid: 93df0a1724edaea469d0a2fac486a94b, type: 3}
-  _networkRunner: {fileID: 0}
+  _networkRunner: {fileID: -9106498831215922605, guid: 7062844ba7dadcb4f95fd500d93d030f, type: 3}
