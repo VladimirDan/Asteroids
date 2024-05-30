@@ -12,7 +12,6 @@ namespace Game.Code.Game.Entities
 
         public void Tick(float deltaTime)
         {
-
         }
 
 

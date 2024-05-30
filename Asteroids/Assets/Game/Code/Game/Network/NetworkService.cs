@@ -1,9 +1,9 @@
 using System.Collections.Generic;
+using Game.Code.Game.Services;
 using Fusion.Sockets;
+using UnityEngine;
 using System;
 using Fusion;
-using Game.Code.Game.Services;
-using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Game.Code.Game
@@ -19,6 +19,7 @@ namespace Game.Code.Game
             _gameFactory = gameFactory;
         }
 
+
         public void OnInput(NetworkRunner runner, NetworkInput input)
         {
             input.Set(_inputService.GetPlayerInput());
@@ -28,7 +29,8 @@ namespace Game.Code.Game
         {
             if (runner.CanSpawn)
             {
-                await _gameFactory.CreatePlayer(Vector2.one * Random.Range(3f, 3f));
+                var pos = Vector2.one * Random.value * 3f;
+                var model = await _gameFactory.CreatePlayer(runner, pos, player);
 
                 Debug.Log($"<color=white>Player Created</color>");
             }
@@ -36,18 +38,30 @@ namespace Game.Code.Game
 
         public void OnPlayerLeft(NetworkRunner runner, PlayerRef player)
         {
+			if (runner.TryGetPlayerObject(player, out var behavior))
+                runner.Despawn(behavior);
         }
 
-        public void OnObjectExitAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player)
+        #region [Unimplemented Callbacks]
+
+        public void OnConnectedToServer(NetworkRunner runner)
         {
 
         }
 
-        public void OnObjectEnterAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player)
+        public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token)
         { 
         }
 
-        public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input)
+        public void OnObjectExitAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player)
+        {
+        }
+
+        public void OnObjectEnterAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player)
+        {
+        }
+
+		 public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input)
         {
         }
 
@@ -55,15 +69,7 @@ namespace Game.Code.Game
         {
         }
 
-        public void OnConnectedToServer(NetworkRunner runner)
-        {
-        }
-
         public void OnDisconnectedFromServer(NetworkRunner runner, NetDisconnectReason reason)
-        {
-        }
-
-        public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token)
         {
         }
 
@@ -102,5 +108,7 @@ namespace Game.Code.Game
         public void OnSceneLoadStart(NetworkRunner runner)
         {
         }
+
+        #endregion
     }
 }
