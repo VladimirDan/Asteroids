@@ -1,4 +1,5 @@
 using Game.Code.Game.Services;
+using Game.Code.Game.StaticData;
 using VContainer.Unity;
 using UnityEngine;
 using VContainer;
@@ -7,23 +8,23 @@ namespace Game.Code.Game.Boot
 {
     public class GameScope : LifetimeScope
     {
-        [SerializeField] private NetworkTickService _tickService;
         [SerializeField] private Camera _inputCamera;
         
 
         protected override void Configure(IContainerBuilder builder)
         {
             RegisterBootstrapper(builder);
-
-            RegisterTickService(builder);
+            
             RegisterGameFactory(builder);
             RegisterInputService(builder);
             RegisterNetworkService(builder);
+            
+            RegisterStaticDataProvider(builder);
         }
 
-        private void RegisterTickService(IContainerBuilder builder)
+        private void RegisterStaticDataProvider(IContainerBuilder builder)
         {
-            builder.RegisterInstance(_tickService);
+            builder.Register<GameStaticDataProvider>(Lifetime.Scoped);
         }
 
         private void RegisterInputService(IContainerBuilder builder)
