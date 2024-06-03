@@ -213,8 +213,8 @@ GameObject:
   - component: {fileID: -6040232162279133436}
   - component: {fileID: -1130363847490023677}
   - component: {fileID: 1772738464754121564}
-  - component: {fileID: 5349210152452481837}
-  - component: {fileID: 2694597558778035854}
+  - component: {fileID: 6604031120978627332}
+  - component: {fileID: 69736371026874145}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -257,7 +257,7 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: -6040232162279133436}
-  - {fileID: 5349210152452481837}
+  - {fileID: 69736371026874145}
 --- !u!114 &-6040232162279133436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e816fed8011b6e46a2ec3fe2f4190e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _move: {fileID: 2694597558778035854}
+  _move: {fileID: 6604031120978627332}
 --- !u!50 &-1130363847490023677
 Rigidbody2D:
   serializedVersion: 4
@@ -333,7 +333,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &5349210152452481837
+--- !u!114 &6604031120978627332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -342,28 +342,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 8501221524724694260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e690b5fb1084f5ab1c86457af401d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 48a765ce1e6dbfb4c9cc98994727f505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _networkRigidbody: {fileID: 0}
+--- !u!114 &69736371026874145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501221524724694260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncScale: 0
-  SyncParent: 1
-  _interpolationTarget: {fileID: 0}
-  UsePreciseRotation: 0
-  UseRenderSleepThresholds: 1
-  RenderThresholds:
-    UseEnergy: 1
-    Position: 0.01
-    Rotation: 0.01
-    Scale: 0.01
---- !u!114 &2694597558778035854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8501221524724694260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9caa8e42352f5a49a9f93b97b4658ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  SyncParent: 0
+  _autoAOIOverride: 1
+  DisableSharedModeInterpolation: 0
