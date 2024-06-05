@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: -7499829715538145357}
   - component: {fileID: 1621273700999172464}
   - component: {fileID: 5691542541253106898}
+  - component: {fileID: -664533215982378569}
+  - component: {fileID: 1204751656270727329}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -165,4 +167,32 @@ MonoBehaviour:
   ObjectInterest: 1
   Flags: 262145
   NestedObjects: []
-  NetworkedBehaviours: []
+  NetworkedBehaviours:
+  - {fileID: -664533215982378569}
+--- !u!114 &-664533215982378569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389462097783529662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50c5323e71fa124b9ac6668854ceb9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _behavior: {fileID: 0}
+  _move: {fileID: 0}
+--- !u!114 &1204751656270727329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389462097783529662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc9decab0a9d2949b720e1fe4d1ee1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 0}

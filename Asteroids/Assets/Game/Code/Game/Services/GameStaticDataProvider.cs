@@ -10,6 +10,7 @@ namespace Game.Code.Game.StaticData
         private readonly AssetProvider _assetProvider;
         
         public PlayerConfig PlayerConfig { get; private set; }
+        public ProjectileConfig ProjectileConfig { get; private set; }
 
 
         public GameStaticDataProvider(AssetProvider assetProvider)
@@ -22,10 +23,14 @@ namespace Game.Code.Game.StaticData
             var tasks = new UniTask[]
             {
                 LoadPlayerConfig(),
+                LoadProjectileConfig(),
             };
 
             await UniTask.WhenAll(tasks);
         }
+        
+        private async UniTask LoadProjectileConfig() =>
+            ProjectileConfig = await _assetProvider.Load<ProjectileConfig>(ProjectileConfigLabel);
         
         private async UniTask LoadPlayerConfig() =>
             PlayerConfig = await _assetProvider.Load<PlayerConfig>(PlayerConfigLabel);
