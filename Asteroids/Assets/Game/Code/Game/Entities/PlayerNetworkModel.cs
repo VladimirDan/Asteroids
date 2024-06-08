@@ -21,6 +21,9 @@ namespace Game.Code.Game.Entities
         
         public override void FixedUpdateNetwork()
         {
+            if(!Object.HasStateAuthority)
+                return;
+
             if (GetInput(out PlayerInputData input))
             {
                 _move.RotateToFace(input.ShootDirection);

@@ -17,7 +17,7 @@ namespace Game.Code.Game
         {
             if (!runner.IsServer)
                 return;
-
+            
             await _transitionHandler.PlayFadeInAnimation();
             await runner.LoadScene(scene.ToString());
             await _transitionHandler.PlayFadeOutAnimation();

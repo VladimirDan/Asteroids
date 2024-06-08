@@ -1,8 +1,6 @@
-using Game.Scripts.Infrastructure.TickManaging;
-using UnityEngine;
-using System;
-using Fusion;
 using Game.Code.Game.StaticData;
+using UnityEngine;
+using Fusion;
 
 namespace Game.Code.Game.Projectiles
 {
@@ -11,16 +9,29 @@ namespace Game.Code.Game.Projectiles
 		[SerializeField] private PlayerProjectileBehavior _behavior;
         [SerializeField] private PhysicMove _move;
 		
+        [Networked] private TickTimer Lifetime { get; set; }
+
 		private Vector2 _direction;
+
+
+		public override void FixedUpdateNetwork()
+        {
+            if(!Object.HasStateAuthority)
+                return;
+
+            _move.Move(_direction, Runner.DeltaTime);
+
+            if (Lifetime.Expired(Runner))
+                Dispose();
+        }
 
         public void Construct(ProjectileConfig projectileConfig)
         {
 			_move.Construct(projectileConfig.Speed);
             _behavior.Construct();
+       
+            Lifetime = TickTimer.CreateFromSeconds(Runner, projectileConfig.Lifetime);
         }
-        
-		public override void FixedUpdateNetwork() =>
-            _move.Move(_direction, Runner.DeltaTime);
 
         public ProjectileModel SetMoveDirection(Vector2 dir)
         {
@@ -28,7 +39,10 @@ namespace Game.Code.Game.Projectiles
             return this;
         }
 
-        public void Dispose() =>
-            gameObject.SetActive(false);
+        private void Dispose()
+        {
+            Destroy(gameObject); // TODO: Add custom pool implementation
+            Lifetime = TickTimer.None;
+        }
     }
 }
