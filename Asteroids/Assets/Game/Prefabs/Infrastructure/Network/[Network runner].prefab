@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7921513708457208291}
   - component: {fileID: -9106498831215922605}
   - component: {fileID: -6362333364542553210}
-  - component: {fileID: -3794077340190147092}
-  - component: {fileID: 654463137411629523}
+  - component: {fileID: 1726060917402309397}
+  - component: {fileID: 1271609876964089246}
   m_Layer: 0
   m_Name: '[Network runner]'
   m_TagString: Untagged
@@ -62,7 +62,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TickService>k__BackingField: {fileID: 6994887279232135830}
   <Runner>k__BackingField: {fileID: -9106498831215922605}
---- !u!114 &-3794077340190147092
+--- !u!114 &1726060917402309397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338588600084117346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8edbe7108d8a43ab838cf8b8d9453df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1271609876964089246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,21 +91,6 @@ MonoBehaviour:
   ClientPhysicsSimulation: 0
   DeltaTimeMultiplier: 1
   SetUnityFixedTimestep: 0
---- !u!114 &654463137411629523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338588600084117346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90a93abf1a391964a94e5c139605105b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsSceneTakeOverEnabled: 1
-  LogSceneLoadErrors: 1
-  AddressableScenesLabel: FusionScenes
 --- !u!1 &4407280517926087924
 GameObject:
   m_ObjectHideFlags: 0

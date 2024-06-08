@@ -28,15 +28,13 @@ namespace Game.Code.Game.Services
             _tickService = networkServiceLocator.TickService;
         }
 
-        public async UniTask<PlayerModel> CreatePlayer(NetworkRunner runner, Vector2 pos, PlayerRef player)
+        public async UniTask<PlayerNetworkModel> CreatePlayer(NetworkRunner runner, Vector2 pos, PlayerRef player)
         {
-            var prefab = await _assetProvider.LoadAndGetComponent<PlayerModel>(PlayerLabel);
+            var prefab = await _assetProvider.LoadAndGetComponent<PlayerNetworkModel>(PlayerLabel);
             var obj = await runner.SpawnAsync(prefab, pos, Quaternion.identity, player);
 
-            var model = obj.GetComponent<PlayerModel>();
+            var model = obj.GetComponent<PlayerNetworkModel>();
             model.Construct(_dataProvider.PlayerConfig, this);
-
-            _tickService.AddListener(model);
 
             return model;
         }        
@@ -60,12 +58,6 @@ namespace Game.Code.Game.Services
 
             var model = obj.GetComponent<ProjectileModel>();
             model.Construct(_dataProvider.ProjectileConfig);
-
-            Observable.Timer(TimeSpan.FromSeconds(GameIndents.ProjectileLifeTime))
-                .Subscribe(x => model.Dispose())
-                .AddTo(_disposables);
-
-            _tickService.AddListener(model);
 
             return model;
         }
