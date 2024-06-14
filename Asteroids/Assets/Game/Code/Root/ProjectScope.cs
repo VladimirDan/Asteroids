@@ -24,7 +24,7 @@ namespace Game.Code.Root
 
         protected override void Configure(IContainerBuilder builder)
         {
-			RegisterBootstrapper(builder);
+            RegisterBootstrapper(builder);
             RegisterUpdateRunner(builder);
             
             RegisterStateFactory(builder);
@@ -32,8 +32,8 @@ namespace Game.Code.Root
 
             RegisterNetworkServices(builder);
             RegisterNetworkSceneLoader(builder);
-
-			RegisterAssetProvider(builder);
+            
+            RegisterAssetProvider(builder);
             RegisterCoroutineRunner(builder);
             RegisterSceneLoaderSystem(builder);
         }

@@ -17,43 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 0280b24d6c8809043bf2ecfdea60af3b
   m_SerializeEntries:
-  - m_GUID: 6419a3b83866af14f94abe41b8c0d169
-    m_Address: Player
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 52d4580ea1cb316449d1b765c0e24dee
-    m_Address: Projectile
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4c49dafb2d124534894851b8dc2c7d6e
-    m_Address: Enemy
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e0e2947b442b1d14a80f0070e0f03cb9
-    m_Address: PlayerConfig
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: aca3f10af99db7646bf69b83b95a2c83
-    m_Address: ProjectileConfig
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 12d2b7091e8dd41468a1ca73099d821d
     m_Address: GameConfig
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c507b36801142f74b9dd602ce86decda
-    m_Address: EnemyConfig
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: feee142913c38244db3ea9605463182b
-    m_Address: Assets/Game/Prefabs/Game/Level.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -71,10 +71,10 @@ namespace Game.Code.Game
 
         private bool IsShootButtonPressed() =>
             _pressedShootButton || Input.GetButtonDown("Fire1");
-
         
         public void Start() =>
             _tickSource.AddListener(this);
+        
         public void Dispose() =>
             _tickSource.RemoveListener(this);
     }
