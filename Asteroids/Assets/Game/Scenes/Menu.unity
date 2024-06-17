@@ -567,7 +567,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 718391001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43d2bf4d11547f39352b86db600b83b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9113e5c8bdf917d418fe0b15f2d1f561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <StartButton>k__BackingField: {fileID: 1190193497}
@@ -1609,7 +1609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1655567165}
-  - component: {fileID: 1655567164}
+  - component: {fileID: 1655567166}
   m_Layer: 0
   m_Name: '[Scope]'
   m_TagString: Untagged
@@ -1617,23 +1617,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1655567164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1655567163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b3bf5b5d69409c9408eadb137c5e06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentReference:
-    TypeName: 
-  autoRun: 1
-  autoInjectGameObjects: []
-  _menuView: {fileID: 718391006}
 --- !u!4 &1655567165
 Transform:
   m_ObjectHideFlags: 0
@@ -1649,6 +1632,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1655567166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655567163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e2888c8fb39b34e8489b2df915e2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentReference:
+    TypeName: 
+  autoRun: 1
+  autoInjectGameObjects: []
+  _menuView: {fileID: 718391006}
 --- !u!1 &1686057832
 GameObject:
   m_ObjectHideFlags: 0
